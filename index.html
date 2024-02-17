@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <title>Current Time and Weather</title>
+    <style>
+        body {
+            background-image: url('your-background-image.jpg'); /* Replace 'your-background-image.jpg' with the URL of your image */
+            background-size: cover;
+            background-position: center;
+            font-family: "Arial", sans-serif;
+            text-align: center;
+            background-image: url(''); /* Empty URL for now */
+            background-size: cover;
+            background-position: center;
+            color: #333; /* Dark text color */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        #time {
+            font-size: 48px; /* Larger font size */
+            background: rgba(0, 0, 0, 0.6); /* Slightly transparent background */
+            padding: 20px; /* Increased padding for better readability */
+            border-radius: 10px; /* Rounded corners */
+            margin: 10px;
+            color: #fff; /* Light text color */
+        }
+
+        #weather {
+            font-size: 36px; /* Larger font size */
+            background: rgba(0, 0, 0, 0.6); /* Slightly transparent background */
+            padding: 15px; /* Increased padding for better readability */
+            border-radius: 10px; /* Rounded corners */
+            margin: 10px;
+            color: #fff; /* Light text color */
+        }
+
+        #weather-icon {
+            font-size: 64px; /* Larger weather icon size */
+            margin-top: 10px;
+        }
+
+        #city {
+            font-size: 24px;
+            background: rgba(0, 0, 0, 0.6);
+            padding: 10px;
+            border-radius: 10px;
+            margin: 10px;
+            color: #fff;
+        }
+        #ip-warning {
+        background: rgba(0, 0, 0, 0.6);
+        padding: 10px;
+        border-radius: 10px;
+        margin: 10px;
+        color: #fff;
+        max-width: 400px;
+        margin: 0 auto;
+    }
+
+    #accept-button {
+        background-color: #007bff; /* Blue background color */
+        color: #fff; /* White text color */
+        border: none;
+        padding: 10px 20px;
+        cursor: pointer;
+        border-radius: 5px;
+        margin-top: 10px;
+    }
+
+    #accept-button:hover {
+        background-color: #0056b3; /* Darker blue on hover */
+    }
+    .photographer {
+            position: fixed;
+            left: 10px;
+            bottom: 10px;
+            background: rgba(0, 0, 0, 0.6);
+            padding: 10px;
+            border-radius: 10px;
+            color: #fff;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="time"></div>
+    <div id="city"></div>
+    <div id="weather">
+        <i id="weather-icon" class="fas"></i> 
+        <span id="weather-temperature"></span> 
+        <span id="weather-description"></span>
+    </div>
+    <div class="photographer">
+        Background By <span id="photographer-name"></span>
+    </div>
+
+    <div id="ip-warning" style="font-size: 16px; color: #fff; text-align: center; margin-top: 10px;">
+        <span id="warning-text">This website may use your IP address to provide location-specific data. Your IP is not shared with the developer.</span>
+        <br>
+        <button id="accept-button">I accept</button>
+    </div>
+    
+    <script>
+        document.getElementById("accept-button").addEventListener("click", function () {
+            document.getElementById("ip-warning").style.display = "none";
+        });
+    </script>
+
+    <script src="script.js"></script>
+</body>
+</html>
