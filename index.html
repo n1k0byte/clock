@@ -85,6 +85,20 @@
             border-radius: 10px;
             color: #fff;
         }
+        #github-button {
+            position: fixed;
+            left: 10px;
+            bottom: 60px; /* Adjusted to place above the photographer credit */
+            padding: 10px;
+            border-radius: 10px;
+            color: #fff;
+        }
+
+        #github-icon {
+            width: 30px; /* Adjust size as needed */
+            vertical-align: middle;
+            margin-right: 10px; /* Add some spacing between icon and text */
+        }
     </style>
 </head>
 
@@ -95,6 +109,11 @@
         <i id="weather-icon" class="fas"></i> 
         <span id="weather-temperature"></span> 
         <span id="weather-description"></span>
+    </div>
+    <div id="github-button">
+        <a href="https://github.com/your-username/your-repository" target="_blank">
+            <img id="github-icon" src="github-icon.png" alt="GitHub Icon"> GitHub
+        </a>
     </div>
     <div class="photographer">
         Background By <span id="photographer-name"></span>
