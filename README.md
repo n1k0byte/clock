@@ -32,6 +32,5 @@ This project is a simple webpage that displays the current time, weather, and a 
 
 ## Credits
 
-- This project was inspired by [n1k0byte](https://github.com/n1k0byte)'s clock project.
 - Background images are provided by the talented photographers on [Pexels](https://www.pexels.com/).
 
